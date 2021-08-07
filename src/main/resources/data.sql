@@ -9,9 +9,9 @@ CREATE TABLE IF NOT EXISTS "academy_award" (
  "id_academy_award" SERIAL NOT NULL,
  "year" VARCHAR(255) NULL,
  "category" VARCHAR(255) NULL,
- "nominee" VARCHAR(255) NULL,
+ "nominee" TEXT NULL,
  "additional_info" VARCHAR(255) NULL,
- "won" BIT,
+ "won" TEXT NULL,
  PRIMARY KEY ("id_academy_award"));
 
 
