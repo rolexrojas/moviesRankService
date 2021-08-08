@@ -24,6 +24,11 @@ public class ApplicationProperties {
     private String timeExpirationToken;
     @Value("${token.secret}")
     private String tokenSecret;
+    @Value("${omdb.url}")
+    private String omdbUrl;
+    @Value("${omdb.apikey}")
+    private String omdbApikey;
+
 
     public String getDataSourceUrl() {
         return dataSourceUrl;
@@ -79,5 +84,21 @@ public class ApplicationProperties {
 
     public void setTokenSecret(String tokenSecret) {
         this.tokenSecret = tokenSecret;
+    }
+
+    public String getOmdbUrl() {
+        return omdbUrl;
+    }
+
+    public void setOmdbUrl(String omdbUrl) {
+        this.omdbUrl = omdbUrl;
+    }
+
+    public String getOmdbApikey() {
+        return omdbApikey;
+    }
+
+    public void setOmdbApikey(String omdbApikey) {
+        this.omdbApikey = omdbApikey;
     }
 }
