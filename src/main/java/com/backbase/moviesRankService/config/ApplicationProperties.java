@@ -20,6 +20,10 @@ public class ApplicationProperties {
     private String datasourceDriverClassName;
     @Value("${server.port}")
     private String serverPort;
+    @Value("${time.expiration.token}")
+    private String timeExpirationToken;
+    @Value("${token.secret}")
+    private String tokenSecret;
 
     public String getDataSourceUrl() {
         return dataSourceUrl;
@@ -59,5 +63,21 @@ public class ApplicationProperties {
 
     public void setDatasourceDriverClassName(String datasourceDriverClassName) {
         this.datasourceDriverClassName = datasourceDriverClassName;
+    }
+
+    public String getTimeExpirationToken() {
+        return timeExpirationToken;
+    }
+
+    public void setTimeExpirationToken(String timeExpirationToken) {
+        this.timeExpirationToken = timeExpirationToken;
+    }
+
+    public String getTokenSecret() {
+        return tokenSecret;
+    }
+
+    public void setTokenSecret(String tokenSecret) {
+        this.tokenSecret = tokenSecret;
     }
 }

@@ -18,10 +18,14 @@ CREATE TABLE IF NOT EXISTS "academy_award" (
 -- -----------------------------------------------------
 -- Table "movierankdb"."user"
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS "user" ;
+DROP TABLE IF EXISTS "user_auth" ;
 
-CREATE TABLE IF NOT EXISTS "user" (
+CREATE TABLE IF NOT EXISTS "user_auth" (
 "id_user" SERIAL NOT NULL,
 "username" VARCHAR(45) NULL,
 "password" VARCHAR(255) NULL,
-PRIMARY KEY ("id_user"))
+"blocked" BOOLEAN DEFAULT FALSE,
+PRIMARY KEY ("id_user"));
+
+
+--INSERT INTO "user_auth"("username", "password", "blocked") VALUES ('admin','admin', false);

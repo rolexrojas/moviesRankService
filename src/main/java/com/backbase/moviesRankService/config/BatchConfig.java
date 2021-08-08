@@ -1,7 +1,7 @@
 package com.backbase.moviesRankService.config;
 
 
-import com.backbase.moviesRankService.component.JobCompletionListener;
+import com.backbase.moviesRankService.listeners.JobCompletionListener;
 import com.backbase.moviesRankService.processor.AcademyAwardItemProcessor;
 import com.backbase.moviesRankService.types.AcademyAwardsDTO;
 import org.springframework.batch.core.Job;
